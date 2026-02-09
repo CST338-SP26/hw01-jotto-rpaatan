@@ -1,4 +1,6 @@
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * @author Rhu Paatan (rpaatan)
@@ -75,4 +77,80 @@ public class Jotto {
     public void setPlayWords(ArrayList<String> playWords) {
         this.playWords = playWords;
     }
+
+    // OTHER METHODS
+    public ArrayList<String> readWords() {
+        // PASSED TEST CASES
+        ArrayList<String> readInWords = new ArrayList<>();
+        String currentWord = "";
+
+        try {
+            File fr = new File(filename);
+            Scanner fs = new Scanner(fr);
+
+            while(fs.hasNext()) {
+                boolean isNotDuplicate = true;
+                currentWord = fs.next();
+
+                for (String readInWord : readInWords) {
+                    if (readInWord.equals(currentWord)) {
+                        isNotDuplicate = false;
+                        break;
+                    }
+                }
+
+                if(isNotDuplicate) {
+                    readInWords.add(currentWord);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Couldn't open " + filename);
+        }
+
+        return readInWords;
+    }
+
+    public void play() {
+
+    }
+
+    public String showPlayedWords() {
+        return "";
+    }
+
+    public String showWordList() {
+        return "";
+    }
+
+    public ArrayList<String> showPlayerGuesses() {
+
+        return null;
+    }
+
+    int guess() {
+        return 0;
+    }
+
+    public int getLetterCount(String wordGuess) {
+        return 0;
+    }
+
+    void updateWordList() {
+    }
+
+    public boolean pickWord() {
+        return true;
+    }
+
+    public boolean addPlayerGuess(String wordGuess) {
+        return true;
+    }
+
+    void playerGuessScores(ArrayList<String> guesses){
+    }
+
+    public ArrayList<String> getPlayedWords() {
+        return null;
+    }
+
 }
