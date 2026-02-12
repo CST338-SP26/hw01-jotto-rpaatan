@@ -110,7 +110,52 @@ public class Jotto {
         return readInWords;
     }
 
-    public void play() {
+    public void play() { // CODE FINISHED, UNTESTED.
+        Scanner in = new Scanner(System.in);
+        String playerInput = "";
+        String exitGame = "zz";
+
+
+        System.out.println("Welcome to the game.");
+
+        do {
+            System.out.println("Current Score:" + score + "\n" +
+                    "=-=-=-=-=-=-=-=-=-=-=\n" +
+                    "Choose one of the following:\n" +
+                    "1:\t Start the game\n" +
+                    "2:\t See the word list\n" +
+                    "3:\t See the chosen words\n" +
+                    "4:\t Show Player guesses\n" +
+                    "zz to exit\n" +
+                    "=-=-=-=-=-=-=-=-=-=-=\n");
+
+            System.out.println("What is your choice: ");
+            playerInput = in.next();
+
+            if(playerInput.equals("one") || playerInput.equals("1")) {
+                boolean wordPicked = pickWord();
+                if(wordPicked) {
+                    score = guess();
+                } else {
+                    showPlayerGuesses();
+                }
+            } else if(playerInput.equals("two") || playerInput.equals("2")) {
+                showWordList();
+            } else if(playerInput.equals("three") || playerInput.equals("3")) {
+                showPlayedWords();
+            } else if(playerInput.equals("four") || playerInput.equals("4")) {
+                showPlayerGuesses();
+            } else if((playerInput.toLowerCase()).equals(exitGame)) {
+                System.out.println("Final Score: " + getScore() + "\n" +
+                        "Thank you for playing");
+            } else {
+                System.out.println("I don't know what " + playerInput + "is.");
+            }
+
+            System.out.println("Press enter to continue.");
+            playerInput = in.next();
+
+        } while(!(playerInput.equalsIgnoreCase(exitGame)));
 
     }
 
