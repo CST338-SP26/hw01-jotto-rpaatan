@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JottoTest" tests="18" skipped="0" failures="6" errors="0" timestamp="2026-02-14T09:15:11.378Z" hostname="HPENVYX360" time="0.417">
+  <properties/>
+  <testcase name="showPlayedWords()" classname="JottoTest" time="0.172">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at Jotto.pickWord(Jotto.java:323)
+	at JottoTest.showPlayedWords(JottoTest.java:117)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="setCurrentWord()" classname="JottoTest" time="0.007"/>
+  <testcase name="showPlayerGuesses()" classname="JottoTest" time="0.02">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at JottoTest.showPlayerGuesses(JottoTest.java:135)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="readWords()" classname="JottoTest" time="0.011"/>
+  <testcase name="showWordList()" classname="JottoTest" time="0.016">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:179)
+	at app//JottoTest.showWordList(JottoTest.java:127)
+	at java.base@11.0.29/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="pickWord()" classname="JottoTest" time="0.008">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at Jotto.pickWord(Jotto.java:323)
+	at JottoTest.pickWord(JottoTest.java:170)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="getPlayedWords()" classname="JottoTest" time="0.002"/>
+  <testcase name="getLetterCount()" classname="JottoTest" time="0.022">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;3&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;3&gt; but was: &lt;0&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
+	at app//JottoTest.getLetterCount(JottoTest.java:157)
+	at java.base@11.0.29/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="getCurrentWord()" classname="JottoTest" time="0.009"/>
+  <testcase name="score()" classname="JottoTest" time="0.008"/>
+  <testcase name="updateWordList()" classname="JottoTest" time="0.004"/>
+  <testcase name="playerGuessScores()" classname="JottoTest" time="0.006"/>
+  <testcase name="addPlayerGuess()" classname="JottoTest" time="0.011">
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at Jotto.addPlayerGuess(Jotto.java:340)
+	at JottoTest.addPlayerGuess(JottoTest.java:188)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="setFilename()" classname="JottoTest" time="0.005"/>
+  <testcase name="getFilename()" classname="JottoTest" time="0.007"/>
+  <testcase name="getPlayerGuesses()" classname="JottoTest" time="0.012"/>
+  <testcase name="getScore()" classname="JottoTest" time="0.016"/>
+  <testcase name="getWordList()" classname="JottoTest" time="0.01"/>
+  <system-out><![CDATA[No guesses yet
+Checking oiled
+Checking grant
+Checking adieu
+Checking salet
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
