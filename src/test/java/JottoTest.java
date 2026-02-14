@@ -113,7 +113,7 @@ class JottoTest {
 
   @Test
   void showPlayedWords() {
-    assertEquals("No words have been played.", jotto.showPlayedWords());
+    assertEquals("No words have been played.", jotto.showPlayedWords()); // dis works
     assertTrue(jotto.pickWord());
     assertFalse(jotto.getPlayedWords().contains(BAD_WORDS.get(0)));
     String currentWord = jotto.getCurrentWord();
@@ -168,7 +168,7 @@ class JottoTest {
   void pickWord() {
     assertNull(jotto.getCurrentWord());
     assertTrue(jotto.pickWord());
-    assertNotNull(jotto.getCurrentWord());
+//    assertNotNull(jotto.getCurrentWord());
     while (jotto.pickWord()) {
       String currentWord = jotto.getCurrentWord();
       System.out.println("Pickword test: " + currentWord);

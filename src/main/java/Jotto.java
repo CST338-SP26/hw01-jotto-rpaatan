@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -25,7 +26,7 @@ public class Jotto {
     // CONSTRUCTOR(S)
     public Jotto(String filename) {
         this.filename = filename;
-//        readWords();
+        readWords();
     }
 
     // GETTERS & SETTERS
@@ -107,8 +108,10 @@ public class Jotto {
             System.out.println("Couldn't open " + filename);
         }
 
-        return readInWords;
-    }
+        wordList = readInWords;
+
+        return wordList;
+    } // PASSED
 
     public void play() { // CODE FINISHED, UNTESTED.
         Scanner in = new Scanner(System.in);
@@ -157,11 +160,22 @@ public class Jotto {
 
         } while(!(playerInput.equalsIgnoreCase(exitGame)));
 
-    }
+    } // UNFINISHED -- NEEDS ADD. METHODS
 
     public String showPlayedWords() {
-        return "";
-    }
+        if(playWords == null) {
+            return "No words have been played.";
+        }
+
+        StringBuilder sb = new StringBuilder("Current list of played words:");
+
+        for (String playWord : playWords) {
+            //   for(int i = 0; i < playWords.size(); i++) {
+            sb.append("\n").append(playWord);
+        }
+
+        return sb.toString();
+    } // METHOD NEEDS: pickWord(), getPlayedWords
 
     public String showWordList() {
         return "";
@@ -184,8 +198,30 @@ public class Jotto {
     }
 
     public boolean pickWord() {
+        if(wordList == null) {
+            return true;
+        }
+
+        Random r = new Random();
+        int randomLocation = Math.abs(r.nextInt() % wordList.size());
+
+        currentWord = wordList.get(randomLocation);
+
+        if(playWords.contains(currentWord) && wordList.size() == playWords.size()) {
+            System.out.println("You've guessed them all!");
+            return false;
+        } else if (playWords.contains(currentWord) && wordList.size() != playWords.size()) {
+            pickWord();
+        }
+
+        playWords.add(currentWord);
+
+        if(DEBUG) {
+            System.out.println(currentWord);
+        }
+
         return true;
-    }
+    } // METHOD NEEDS: instantiation of playWords -- otherwise nullpointer exception.
 
     public boolean addPlayerGuess(String wordGuess) {
         return true;
