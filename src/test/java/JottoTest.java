@@ -113,7 +113,7 @@ class JottoTest {
 
   @Test
   void showPlayedWords() {
-    assertEquals("No words have been played.", jotto.showPlayedWords()); // dis works
+    assertEquals("No words have been played.", jotto.showPlayedWords());
     assertTrue(jotto.pickWord());
     assertFalse(jotto.getPlayedWords().contains(BAD_WORDS.get(0)));
     String currentWord = jotto.getCurrentWord();

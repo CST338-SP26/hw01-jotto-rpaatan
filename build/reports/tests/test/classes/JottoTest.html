@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.095s</div>
+<div class="counter">0.346s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,17 +76,12 @@
 <a name="addPlayerGuess()"></a>
 <h3 class="failures">addPlayerGuess()</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
-	at app//org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
-	at app//org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:31)
-	at app//org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:227)
-	at app//JottoTest.addPlayerGuess(JottoTest.java:189)
-	at java.base@11.0.29/java.lang.reflect.Method.invoke(Method.java:572)
-	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
+<pre>java.lang.NullPointerException
+	at Jotto.addPlayerGuess(Jotto.java:340)
+	at JottoTest.addPlayerGuess(JottoTest.java:188)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 </pre>
 </span>
 </div>
@@ -94,14 +89,14 @@
 <a name="getLetterCount()"></a>
 <h3 class="failures">getLetterCount()</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;5&gt; but was: &lt;0&gt;
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;3&gt; but was: &lt;0&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
-	at app//JottoTest.getLetterCount(JottoTest.java:156)
+	at app//JottoTest.getLetterCount(JottoTest.java:157)
 	at java.base@11.0.29/java.lang.reflect.Method.invoke(Method.java:572)
 	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
@@ -112,17 +107,12 @@
 <a name="pickWord()"></a>
 <h3 class="failures">pickWord()</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:179)
-	at app//JottoTest.pickWord(JottoTest.java:175)
-	at java.base@11.0.29/java.lang.reflect.Method.invoke(Method.java:572)
-	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.29/java.util.ArrayList.forEach(ArrayList.java:1541)
+<pre>java.lang.NullPointerException
+	at Jotto.pickWord(Jotto.java:323)
+	at JottoTest.pickWord(JottoTest.java:170)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 </pre>
 </span>
 </div>
@@ -131,7 +121,8 @@
 <h3 class="failures">showPlayedWords()</h3>
 <span class="code">
 <pre>java.lang.NullPointerException
-	at JottoTest.showPlayedWords(JottoTest.java:118)
+	at Jotto.pickWord(Jotto.java:323)
+	at JottoTest.showPlayedWords(JottoTest.java:117)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:572)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
@@ -181,92 +172,92 @@
 </thead>
 <tr>
 <td class="failures">addPlayerGuess()</td>
-<td class="failures">0.006s</td>
+<td class="failures">0.011s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">getCurrentWord()</td>
-<td class="success">0.002s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getFilename()</td>
-<td class="success">0.003s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">getLetterCount()</td>
-<td class="failures">0.003s</td>
+<td class="failures">0.022s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">getPlayedWords()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getPlayerGuesses()</td>
-<td class="success">0.005s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getScore()</td>
-<td class="success">0.002s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getWordList()</td>
-<td class="success">0.003s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">pickWord()</td>
-<td class="failures">0.003s</td>
+<td class="failures">0.008s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">playerGuessScores()</td>
-<td class="success">0.002s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">readWords()</td>
-<td class="success">0.003s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">score()</td>
-<td class="success">0.002s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">setCurrentWord()</td>
-<td class="success">0.001s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">setFilename()</td>
-<td class="success">0.002s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">showPlayedWords()</td>
-<td class="failures">0.026s</td>
+<td class="failures">0.172s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">showPlayerGuesses()</td>
-<td class="failures">0.003s</td>
+<td class="failures">0.020s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">showWordList()</td>
-<td class="failures">0.025s</td>
+<td class="failures">0.016s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">updateWordList()</td>
-<td class="success">0.003s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -274,11 +265,11 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Checking oiled
+<pre>No guesses yet
+Checking oiled
 Checking grant
 Checking adieu
 Checking salet
-Pickword test: null
 </pre>
 </span>
 </div>
@@ -290,7 +281,7 @@ Pickword test: null
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14</a> at Feb 13, 2026, 7:23:37 PM</p>
+<a href="https://www.gradle.org">Gradle 8.14</a> at Feb 14, 2026, 1:15:12 AM</p>
 </div>
 </div>
 </body>
